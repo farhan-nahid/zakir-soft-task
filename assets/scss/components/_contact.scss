@@ -51,6 +51,7 @@
 
 @media only screen and (max-width: 688px) {
   #contact__us {
+    margin-top: 79px;
     padding: 32px 27px 48px 29px;
     .contact__image {
       img {
@@ -63,6 +64,9 @@
       width: 100%;
       h2 {
         @include font_styles(40px, 800, 48px, 0, $white_text);
+      }
+      p {
+        margin: 15px 0 21px 0;
       }
     }
   }

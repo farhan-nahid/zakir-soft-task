@@ -7,7 +7,6 @@ header {
   background-color: $header_bg;
   position: relative;
   #navigation {
-    height: 48px;
     @include flex_item(space-between, center);
     ul {
       @include flex_item(center, center);
@@ -54,7 +53,9 @@ header {
       margin-top: 28px;
       width: 515px;
       li {
-        height: 100%;
+        &:nth-child(5) {
+          display: none;
+        }
         .contact__btn {
           height: 48px;
           width: 138px;
@@ -89,11 +90,14 @@ header {
 @media only screen and (max-width: 688px) {
   header {
     #hero__area {
+      margin-top: 87px;
       h1 {
         @include font_styles(56px, 800, 64px, -1px, $white_text);
+        margin-bottom: 12px;
       }
       p {
         width: 100%;
+        margin-bottom: 87px;
       }
     }
   }

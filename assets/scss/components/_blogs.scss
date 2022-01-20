@@ -48,12 +48,37 @@
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  #blogs {
+    .blog__card__container {
+      .blog__card {
+        &:nth-child(4) {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 688px) {
   #blogs {
     .blog__card__container {
       .blog__card {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  #blogs {
+    margin-top: 0;
+    .blog__card__container {
+      .blog__card {
         max-width: 370px;
-        margin-left: auto;
+        margin-bottom: 52px;
+        &:nth-child(4) {
+          margin-left: 0;
+        }
         .blog__image {
           height: 224px;
         }

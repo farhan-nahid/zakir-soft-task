@@ -61,13 +61,16 @@
     flex-direction: column;
     .category__card {
       width: 100%;
+      margin-right: 0;
+      margin-bottom: 52px;
       &:nth-child(2) {
-        margin-right: auto;
+        margin-right: 0;
       }
       .category__image {
         height: 224px;
       }
       .category__description {
+        margin-bottom: 0px;
         h2 {
           @include font_styles(24px, 700, 32px, 0, $dark_text);
           margin: 19px 0 12px 0;

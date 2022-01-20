@@ -34,6 +34,8 @@
 
 @media only screen and (max-width: 992px) {
   #newsletter {
+    margin-top: 76px;
+    padding-bottom: 80px;
     @include flex_item(flex-start, flex-start);
     flex-direction: column;
     form {

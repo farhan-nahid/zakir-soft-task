@@ -101,7 +101,6 @@ header {
 }
 
 header #navigation {
-  height: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,8 +200,8 @@ header #navigation .nav__links {
   width: 515px;
 }
 
-header #navigation .nav__links li {
-  height: 100%;
+header #navigation .nav__links li:nth-child(5) {
+  display: none;
 }
 
 header #navigation .nav__links li .contact__btn {
@@ -255,15 +254,20 @@ header #hero__area p {
 }
 
 @media only screen and (max-width: 688px) {
+  header #hero__area {
+    margin-top: 87px;
+  }
   header #hero__area h1 {
     font-size: 56px;
     font-weight: 800;
     line-height: 64px;
     letter-spacing: -1px;
     color: #ffffff;
+    margin-bottom: 12px;
   }
   header #hero__area p {
     width: 100%;
+    margin-bottom: 87px;
   }
 }
 
@@ -384,12 +388,17 @@ header #hero__area p {
   }
   #category .category__card {
     width: 100%;
+    margin-right: 0;
+    margin-bottom: 52px;
   }
   #category .category__card:nth-child(2) {
-    margin-right: auto;
+    margin-right: 0;
   }
   #category .category__card .category__image {
     height: 224px;
+  }
+  #category .category__card .category__description {
+    margin-bottom: 0px;
   }
   #category .category__card .category__description h2 {
     font-size: 24px;
@@ -493,10 +502,28 @@ header #hero__area p {
   margin-bottom: 80px;
 }
 
+@media only screen and (max-width: 1200px) {
+  #blogs .blog__card__container .blog__card:nth-child(4) {
+    margin-left: 30px;
+  }
+}
+
 @media only screen and (max-width: 688px) {
   #blogs .blog__card__container .blog__card {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  #blogs {
+    margin-top: 0;
+  }
+  #blogs .blog__card__container .blog__card {
     max-width: 370px;
-    margin-left: auto;
+    margin-bottom: 52px;
+  }
+  #blogs .blog__card__container .blog__card:nth-child(4) {
+    margin-left: 0;
   }
   #blogs .blog__card__container .blog__card .blog__image {
     height: 224px;
@@ -596,6 +623,8 @@ header #hero__area p {
 
 @media only screen and (max-width: 992px) {
   #newsletter {
+    margin-top: 76px;
+    padding-bottom: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -708,6 +737,7 @@ header #hero__area p {
 
 @media only screen and (max-width: 688px) {
   #contact__us {
+    margin-top: 79px;
     padding: 32px 27px 48px 29px;
   }
   #contact__us .contact__image img {
@@ -724,6 +754,9 @@ header #hero__area p {
     line-height: 48px;
     letter-spacing: 0;
     color: #ffffff;
+  }
+  #contact__us .contact__content p {
+    margin: 15px 0 21px 0;
   }
 }
 
@@ -885,11 +918,8 @@ footer .copyright ul li a {
   footer .footer__items .footer__title,
   footer .footer__items .footer__menu,
   footer .footer__items .social__link {
-    width: 300px;
+    width: 25%;
     margin-right: 0;
-  }
-  footer .footer__items .social__link {
-    margin-top: 50px;
   }
   footer .footer__items .social__link ul {
     -webkit-box-pack: start;
