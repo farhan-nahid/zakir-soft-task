@@ -16,8 +16,8 @@
     input {
       width: 370px;
       height: 48px;
-      background-color: #fff;
-      border: 1px solid #f3d1bf;
+      background-color: $white_text;
+      border: 1px solid $border_color;
       border-radius: 6px;
       padding: 9px 16px 7px 16px;
       font-family: inherit;
@@ -26,7 +26,7 @@
         outline: 0;
       }
       &::placeholder {
-        @include font_styles(16px, 400, 32px, 0, #391400a3);
+        @include font_styles(16px, 400, 32px, 0, $dark_paragraph);
         font-family: Epilogue;
       }
     }
