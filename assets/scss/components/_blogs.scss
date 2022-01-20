@@ -7,53 +7,43 @@
 #blogs {
   margin-top: 80px;
   border-bottom: 1px solid $border_color;
-  @include flex_item(center, center);
-  flex-wrap: wrap;
-  .blog__card {
-    width: 370px;
-    margin-bottom: 68px;
-    margin-left: 30px;
-    &:nth-child(1),
-    &:nth-child(4) {
-      margin-left: 0;
-    }
-    .blog__image {
-      height: 224px;
-      border-radius: 6px;
-      overflow: hidden;
-      position: relative;
-      &::after {
-        @extend %over__lay;
+  .blog__card__container {
+    @include flex_item(center, center);
+    flex-wrap: wrap;
+    .blog__card {
+      width: 370px;
+      margin-bottom: 68px;
+      margin-left: 30px;
+      &:nth-child(1),
+      &:nth-child(4) {
+        margin-left: 0;
       }
-    }
-    .blog__description {
-      margin-top: 26px;
-      h6 {
-        @include font_styles(20px, 400, 32px, 0, $dark_text);
+      .blog__image {
+        height: 224px;
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+        &::after {
+          @extend %over__lay;
+        }
       }
-      h4 {
-        @include font_styles(24px, 700, 32px, 0, $dark_text);
-        margin: 15px 0;
-      }
-      p {
-        @include font_styles(16px, 400, 32px, 0, $dark_paragraph);
+      .blog__description {
+        margin-top: 26px;
+        h6 {
+          @include font_styles(20px, 400, 32px, 0, $dark_text);
+        }
+        h4 {
+          @include font_styles(24px, 700, 32px, 0, $dark_text);
+          margin: 15px 0;
+        }
+        p {
+          @include font_styles(16px, 400, 32px, 0, $dark_paragraph);
+        }
       }
     }
   }
-}
-
-#load__more {
-  @include flex_item(center, center);
-  button {
-    @include font_styles(14px, 900, 14px, 0, $dark_text);
-    background-color: #fff;
-    text-align: center;
-    height: 48px;
-    width: 170px;
-    border-radius: 6px;
-    box-shadow: 0px 3px 9px rgba(57, 20, 0, 0.08);
-    border: 0;
-    outline: 0;
-    cursor: pointer;
+  #load__more {
+    @include flex_item(center, center);
+    margin-bottom: 80px;
   }
 }
