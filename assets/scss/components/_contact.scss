@@ -6,10 +6,10 @@
 
 #contact__us {
   margin-top: 111px;
-  background-color: #ef6d58;
+  background-color: $brand_color;
   padding: 41.25px 100px 71px 100px;
   @include flex_item(space-between, center);
-  border-radius: 6px;
+  border-radius: $border_radius;
   .contact__content {
     width: 470px;
     margin-right: 70px;

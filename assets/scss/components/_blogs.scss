@@ -20,7 +20,7 @@
       }
       .blog__image {
         height: 224px;
-        border-radius: 6px;
+        border-radius: $border_radius;
         overflow: hidden;
         position: relative;
         &::after {

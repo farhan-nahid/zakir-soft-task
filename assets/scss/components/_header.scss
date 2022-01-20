@@ -24,7 +24,7 @@ header {
           @include flex_item(center, center);
           height: 48px;
           width: 138px;
-          border-radius: 6px;
+          border-radius: $border_radius;
           border: 1px solid #ffffff4b;
         }
       }

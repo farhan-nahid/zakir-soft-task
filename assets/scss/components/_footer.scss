@@ -1,0 +1,78 @@
+// import variables & mixins
+@import '../variables/variables';
+@import '../mixins/fontStyles';
+@import '../mixins/flexItem';
+@import '../extended/overlay';
+
+footer {
+  margin-top: 89px;
+  .footer__items {
+    padding: 89px 0 68px 0;
+    border-bottom: 1px solid $border_color;
+    @include flex_item(start, start);
+    .footer__title {
+      margin-right: 210px;
+      h4 {
+        @include font_styles(24px, 700, 32px, 0, $dark_text);
+      }
+    }
+    .footer__menu {
+      margin-right: 248px;
+      h5 {
+        @include font_styles(16px, 400, 32px, 3px, $brand_color);
+        margin-bottom: 16px;
+      }
+      ul {
+        li {
+          a {
+            @include font_styles(16px, 400, 32px, 0, $dark_text);
+          }
+        }
+      }
+    }
+    .social__link {
+      width: 100%;
+      ul {
+        @include flex_item(end, start);
+        li {
+          margin-right: 8px;
+          &:nth-child(3) {
+            margin-right: 0;
+          }
+          a {
+            @include flex_item(center, center);
+            i {
+              height: 48px;
+              width: 48px;
+              background-color: $brand_color;
+              border-radius: 50%;
+              color: #fff;
+              line-height: 48px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    padding: 43px 0 52px 0;
+    @include flex_item(space-between, center);
+    p {
+      @include font_styles(16px, 400, 32px, 0, $dark_paragraph);
+    }
+    ul {
+      @include flex_item(center, center);
+      li {
+        margin-left: 68px;
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+        a {
+          @include font_styles(16px, 400, 32px, 0, $dark_text);
+        }
+      }
+    }
+  }
+}
