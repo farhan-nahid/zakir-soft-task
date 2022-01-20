@@ -41,3 +41,35 @@
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  #category {
+    @include flex_item(center, start);
+    flex-wrap: wrap;
+    .category__card {
+      max-width: 450px;
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  #category {
+    @include flex_item(center, center);
+    flex-direction: column;
+    .category__card {
+      width: 100%;
+      .category__image {
+        height: 224px;
+      }
+      .category__description {
+        h2 {
+          @include font_styles(24px, 700, 32px, 0, $dark_text);
+          margin: 19px 0 12px 0;
+        }
+      }
+    }
+  }
+}
