@@ -2,6 +2,7 @@
 @import '../variables/variables';
 @import '../mixins/fontStyles';
 @import '../mixins/flexItem';
+@import '../extended/overlay';
 
 #category {
   margin-top: 80px;
@@ -17,14 +18,7 @@
       border-radius: 6px;
       overflow: hidden;
       &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #5c2000;
-        opacity: 0.32;
+        @extend %over__lay;
       }
       img {
         height: 100%;
@@ -33,6 +27,7 @@
       }
     }
     .category__description {
+      margin-bottom: 68px;
       h6 {
         @include font_styles(20px, 400, 32px, 0, $dark_text);
       }
@@ -42,7 +37,6 @@
       }
       p {
         @include font_styles(16px, 400, 32px, 0, $dark_paragraph);
-        margin-bottom: 68px;
       }
     }
   }
