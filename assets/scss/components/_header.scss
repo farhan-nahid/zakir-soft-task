@@ -1,0 +1,57 @@
+// import variables & mixins
+@import '../variables/variables';
+@import '../mixins/fontStyles';
+@import '../mixins/flexItem';
+
+header {
+  background-color: $header_bg;
+  #navigation {
+    height: 48px;
+    @include flex_item(space-between, center);
+    ul {
+      margin-top: 16px;
+      height: 32px;
+      @include flex_item(center, center);
+      li {
+        height: 100%;
+        a {
+          @include font_styles(16px, 400, 32px, 0px, $white_text);
+          img {
+            width: 152px;
+          }
+        }
+        #contact__btn {
+          height: 48px;
+          width: 138px;
+          border-radius: 6px;
+          border: 1px solid #ffffff4b;
+          @include flex_item(center, center);
+        }
+      }
+    }
+    .nav__links {
+      margin-top: 28px;
+      width: 515px;
+      @include flex_item(space-between, center);
+      li {
+        height: 100%;
+      }
+    }
+  }
+  #hero__area {
+    margin-top: 104px;
+    @include flex_item(center, center);
+    flex-direction: column;
+    h1 {
+      @include font_styles(72px, 800, 80px, -2px, $white_text);
+      margin-bottom: 24px;
+    }
+    p {
+      width: 570px;
+      margin: 0 auto;
+      text-align: center;
+      color: $light_text;
+      margin-bottom: 66px;
+    }
+  }
+}

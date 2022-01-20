@@ -1,4 +1,8 @@
+// import fonts
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// import variables
+@import '../variables/variables';
 
 * {
   margin: 0;
@@ -17,6 +21,7 @@ html {
 }
 
 body {
+  background-color: $body_bg;
   font-family: 'Epilogue', sans-serif;
 }
 
@@ -35,4 +40,18 @@ li,
 ol {
   margin: 0;
   padding: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+span,
+a {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
 }
