@@ -2,7 +2,6 @@
 @import '../variables/variables';
 @import '../mixins/fontStyles';
 @import '../mixins/flexItem';
-@import '../extended/overlay';
 
 #contact__us {
   margin-top: 111px;
@@ -26,6 +25,48 @@
     img {
       height: 431.749755859375px;
       object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #contact__us {
+    @include flex_item(center, center);
+    flex-direction: column-reverse;
+    padding: 32px 27px 48px 29px;
+    .contact__image {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      img {
+        height: 400px;
+      }
+    }
+    .contact__content {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  #contact__us {
+    padding: 32px 27px 48px 29px;
+    .contact__image {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      img {
+        height: 264px;
+        width: 273px;
+      }
+    }
+    .contact__content {
+      margin-right: 0;
+      width: 100%;
+      h2 {
+        @include font_styles(40px, 800, 48px, 0, $white_text);
+      }
     }
   }
 }

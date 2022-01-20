@@ -32,3 +32,22 @@
     }
   }
 }
+
+@media only screen and (max-width: 992px) {
+  #newsletter {
+    @include flex_item(flex-start, flex-start);
+    flex-direction: column;
+    form {
+      margin-top: 35px;
+      width: 100%;
+      input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

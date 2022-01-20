@@ -595,20 +595,39 @@ header #hero__area p {
   font-family: Epilogue;
 }
 
+@media only screen and (max-width: 992px) {
+  #newsletter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #newsletter form {
+    margin-top: 35px;
+    width: 100%;
+  }
+  #newsletter form input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  #newsletter form button {
+    width: 100%;
+  }
+}
+
 /* 
     contact css
 */
-#category .category__card .category__image::after, #blogs .blog__card__container .blog__card .blog__image::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #5c2000;
-  opacity: 0.32;
-}
-
 #contact__us {
   margin-top: 111px;
   background-color: #ef6d58;
@@ -655,6 +674,63 @@ header #hero__area p {
   height: 431.749755859375px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media only screen and (max-width: 992px) {
+  #contact__us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 32px 27px 48px 29px;
+  }
+  #contact__us .contact__image {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #contact__us .contact__image img {
+    height: 400px;
+  }
+  #contact__us .contact__content {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  #contact__us {
+    padding: 32px 27px 48px 29px;
+  }
+  #contact__us .contact__image {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #contact__us .contact__image img {
+    height: 264px;
+    width: 273px;
+  }
+  #contact__us .contact__content {
+    margin-right: 0;
+    width: 100%;
+  }
+  #contact__us .contact__content h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0;
+    color: #ffffff;
+  }
 }
 
 /* 
