@@ -166,8 +166,8 @@ header #navigation input {
 header #navigation label {
   border-radius: 6px;
   position: absolute;
-  right: 50px;
-  top: 13px;
+  right: 10px;
+  top: 10px;
   height: 48px;
   width: 48px;
   cursor: pointer;
@@ -385,6 +385,9 @@ header #hero__area p {
   #category .category__card {
     width: 100%;
   }
+  #category .category__card:nth-child(2) {
+    margin-right: auto;
+  }
   #category .category__card .category__image {
     height: 224px;
   }
@@ -492,7 +495,8 @@ header #hero__area p {
 
 @media only screen and (max-width: 688px) {
   #blogs .blog__card__container .blog__card {
-    width: 370px;
+    max-width: 370px;
+    margin-left: auto;
   }
   #blogs .blog__card__container .blog__card .blog__image {
     height: 224px;
@@ -507,20 +511,15 @@ header #hero__area p {
   }
 }
 
+@media only screen and (max-width: 380px) {
+  #blogs .blog__card__container .blog__card {
+    width: 100%;
+  }
+}
+
 /* 
     newsletter css
 */
-#category .category__card .category__image::after, #blogs .blog__card__container .blog__card .blog__image::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #5c2000;
-  opacity: 0.32;
-}
-
 #newsletter {
   margin-top: 60px;
   border-bottom: 1px solid #f3d1bf;
@@ -695,7 +694,7 @@ header #hero__area p {
   }
   #contact__us .contact__image {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 37px auto;
     text-align: center;
   }
   #contact__us .contact__image img {
@@ -710,11 +709,6 @@ header #hero__area p {
 @media only screen and (max-width: 688px) {
   #contact__us {
     padding: 32px 27px 48px 29px;
-  }
-  #contact__us .contact__image {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
   }
   #contact__us .contact__image img {
     height: 264px;
@@ -736,17 +730,6 @@ header #hero__area p {
 /* 
     footer css
 */
-#category .category__card .category__image::after, #blogs .blog__card__container .blog__card .blog__image::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #5c2000;
-  opacity: 0.32;
-}
-
 footer {
   margin-top: 89px;
 }
@@ -895,6 +878,7 @@ footer .copyright ul li a {
 
 @media only screen and (max-width: 1200px) {
   footer .footer__items {
+    padding: 89px 0 64px 0;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -911,5 +895,86 @@ footer .copyright ul li a {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  footer {
+    text-align: center;
+  }
+  footer .footer__items {
+    padding: 105px 0 64px 0;
+  }
+  footer .footer__items .footer__title,
+  footer .footer__items .footer__menu,
+  footer .footer__items .social__link {
+    width: 100%;
+  }
+  footer .footer__items .footer__title {
+    margin-bottom: 51px;
+  }
+  footer .footer__items .footer__menu {
+    margin-bottom: 48px;
+  }
+  footer .footer__items .footer__menu2 {
+    margin-bottom: 52px;
+  }
+  footer .footer__items .social__link {
+    margin-top: 0;
+  }
+  footer .footer__items .social__link ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .copyright {
+    padding: 43px 0 52px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .copyright p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0;
+    color: #391400a3;
+    width: 198px;
+    margin: 0 auto;
+  }
+  .copyright ul {
+    margin-top: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .copyright ul li {
+    margin-left: 68px;
+  }
+  .copyright ul li:nth-child(1) {
+    margin-left: 0;
+  }
+  .copyright ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0;
+    color: #391400;
   }
 }

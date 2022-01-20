@@ -2,7 +2,6 @@
 @import '../variables/variables';
 @import '../mixins/fontStyles';
 @import '../mixins/flexItem';
-@import '../extended/overlay';
 
 footer {
   margin-top: 89px;
@@ -80,6 +79,7 @@ footer {
 @media only screen and (max-width: 1200px) {
   footer {
     .footer__items {
+      padding: 89px 0 64px 0;
       flex-wrap: wrap;
       .footer__title,
       .footer__menu,
@@ -91,6 +91,58 @@ footer {
         margin-top: 50px;
         ul {
           justify-content: start;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  footer {
+    text-align: center;
+    .footer__items {
+      padding: 105px 0 64px 0;
+      .footer__title,
+      .footer__menu,
+      .social__link {
+        width: 100%;
+      }
+      .footer__title {
+        margin-bottom: 51px;
+      }
+      .footer__menu {
+        margin-bottom: 48px;
+      }
+      .footer__menu2 {
+        margin-bottom: 52px;
+      }
+      .social__link {
+        margin-top: 0;
+        ul {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .copyright {
+    padding: 43px 0 52px 0;
+    @include flex_item(center, center);
+    flex-direction: column;
+    p {
+      @include font_styles(16px, 400, 32px, 0, $dark_paragraph);
+      width: 198px;
+      margin: 0 auto;
+    }
+    ul {
+      margin-top: 32px;
+      @include flex_item(center, center);
+      li {
+        margin-left: 68px;
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+        a {
+          @include font_styles(16px, 400, 32px, 0, $dark_text);
         }
       }
     }

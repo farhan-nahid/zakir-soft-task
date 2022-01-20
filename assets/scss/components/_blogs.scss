@@ -52,7 +52,8 @@
   #blogs {
     .blog__card__container {
       .blog__card {
-        width: 370px;
+        max-width: 370px;
+        margin-left: auto;
         .blog__image {
           height: 224px;
         }
@@ -62,6 +63,16 @@
             margin: 19px 0 12px 0;
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #blogs {
+    .blog__card__container {
+      .blog__card {
+        width: 100%;
       }
     }
   }

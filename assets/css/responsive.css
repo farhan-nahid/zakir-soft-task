@@ -26,17 +26,8 @@
     justify-content: start;
   }
 
-  #contact__btn {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    -webkit-transform-origin: top;
-    transform-origin: top;
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    opacity: 0;
+  header #navigation ul li #contact__btn {
+    display: none;
   }
 
   .nav__links {
