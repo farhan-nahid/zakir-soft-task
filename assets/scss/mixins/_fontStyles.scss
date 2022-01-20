@@ -1,7 +1,7 @@
-@mixin font_styles($fs, $fw, $lh, $ls, $clr) {
-  font-size: $fs;
-  font-weight: $fw;
-  line-height: $lh;
-  letter-spacing: $ls;
+@mixin font_styles($fontSize, $fontWeight, $lineHeight, $letterSpacing, $clr) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
   color: $clr;
 }

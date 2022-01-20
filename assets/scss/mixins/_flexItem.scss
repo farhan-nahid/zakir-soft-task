@@ -1,5 +1,5 @@
-@mixin flex_item($jc, $ai) {
+@mixin flex_item($justifyContent, $alignItems) {
   display: flex;
-  justify-content: $jc;
-  align-items: $ai;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
 }
