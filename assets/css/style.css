@@ -87,7 +87,7 @@ a {
 
 @media only screen and (max-width: 1200px) {
   .container {
-    width: 92%;
+    width: 90%;
   }
 }
 
@@ -97,6 +97,7 @@ a {
 */
 header {
   background-color: #28293e;
+  position: relative;
 }
 
 header #navigation {
@@ -158,6 +159,34 @@ header #navigation ul li #contact__btn {
   border: 1px solid #ffffff4b;
 }
 
+header #navigation input {
+  display: none;
+}
+
+header #navigation label {
+  border-radius: 6px;
+  position: absolute;
+  right: 50px;
+  top: 13px;
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  color: #ffffff;
+  font-size: 16px;
+  border: 1px solid #ffffff4b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header #navigation .nav__links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,6 +205,16 @@ header #navigation .nav__links li {
   height: 100%;
 }
 
+header #navigation .nav__links li .contact__btn {
+  height: 48px;
+  width: 138px;
+  border-radius: 6px;
+  border: 1px solid #ccc2c2;
+  display: none;
+  text-align: center;
+  line-height: 48px;
+}
+
 header #hero__area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,6 +230,7 @@ header #hero__area {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 
 header #hero__area h1 {
@@ -212,6 +252,19 @@ header #hero__area p {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 66px;
+}
+
+@media only screen and (max-width: 688px) {
+  header #hero__area h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 64px;
+    letter-spacing: -1px;
+    color: #ffffff;
+  }
+  header #hero__area p {
+    width: 100%;
+  }
 }
 
 /* 
@@ -691,4 +744,25 @@ footer .copyright ul li a {
   line-height: 32px;
   letter-spacing: 0;
   color: #391400;
+}
+
+@media only screen and (max-width: 1200px) {
+  footer .footer__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .footer__items .footer__title,
+  footer .footer__items .footer__menu,
+  footer .footer__items .social__link {
+    width: 300px;
+    margin-right: 0;
+  }
+  footer .footer__items .social__link {
+    margin-top: 50px;
+  }
+  footer .footer__items .social__link ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }

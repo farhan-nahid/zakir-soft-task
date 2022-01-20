@@ -76,3 +76,23 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  footer {
+    .footer__items {
+      flex-wrap: wrap;
+      .footer__title,
+      .footer__menu,
+      .social__link {
+        width: 300px;
+        margin-right: 0;
+      }
+      .social__link {
+        margin-top: 50px;
+        ul {
+          justify-content: start;
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@
 
 header {
   background-color: $header_bg;
+  position: relative;
   #navigation {
     height: 48px;
     @include flex_item(space-between, center);
@@ -29,12 +30,40 @@ header {
         }
       }
     }
+    input {
+      display: none;
+    }
+    label {
+      border-radius: $border_radius;
+      position: absolute;
+      right: 50px;
+      top: 13px;
+      height: 48px;
+      width: 48px;
+      cursor: pointer;
+      visibility: hidden;
+      opacity: 0;
+      color: $white_text;
+      font-size: 16px;
+      border: 1px solid #ffffff4b;
+      @include flex_item(center, center);
+    }
+
     .nav__links {
       @include flex_item(space-between, center);
       margin-top: 28px;
       width: 515px;
       li {
         height: 100%;
+        .contact__btn {
+          height: 48px;
+          width: 138px;
+          border-radius: $border_radius;
+          border: 1px solid #ccc2c2;
+          display: none;
+          text-align: center;
+          line-height: 48px;
+        }
       }
     }
   }
@@ -42,6 +71,7 @@ header {
     @include flex_item(center, center);
     margin-top: 104px;
     flex-direction: column;
+    text-align: center;
     h1 {
       @include font_styles(72px, 800, 80px, -2px, $white_text);
       margin-bottom: 24px;
@@ -52,6 +82,19 @@ header {
       margin: 0 auto;
       text-align: center;
       margin-bottom: 66px;
+    }
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  header {
+    #hero__area {
+      h1 {
+        @include font_styles(56px, 800, 64px, -1px, $white_text);
+      }
+      p {
+        width: 100%;
+      }
     }
   }
 }
